@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <div class="content" id="content"></div>
+    <script>
+        let msg="I LOVE YOU, JAZMIN, LET ME, YOU LOVE"; 
+        let content =document.getElementById("content");
+        let arrRow=msg.split(','); 
+        arrRow.forEach((arr, i)=>{  
+            let arrMod=arr.split('');
+            let div=``;
+            if(arrMod.length>5){
+               div=`<div class="row1">`;
+            }else{
+               div=`<div class="row2">`;
+            } 
+            arrMod.forEach((value, index)=>{  
+                if(value!=" "){
+                    div+=`<div class="heart">
+                                <span>${value}</span>
+                            </div>` 
+                } else{
+                    div+=`<div class="space"> </div>`
+                }     
+            })
+            div+='</div>' 
+            content.insertAdjacentHTML("beforeend",  div);  
+        })  
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
