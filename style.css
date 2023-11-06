@@ -111,8 +111,11 @@ body{
     body    {
         display: block; 
     }
+    .content .row1{
+        margin-top:2rem;
+    }
     .heart{
-        font-size:.6em;
+        font-size:.9em;
     }
 } 
  
