@@ -25,8 +25,8 @@ body{
 .content{
     display: flex;
     width: 80%;
-    flex-direction: row; 
-    justify-content: center; 
+    /*flex-direction: row; */
+    justify-content: center;  
     margin: 40px auto;
     flex-wrap: wrap;
 }
@@ -34,7 +34,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row; 
-    justify-content: center; 
+    justify-content: center;  
     flex-wrap: wrap;
 }
 .content .row2{
@@ -107,7 +107,10 @@ body{
     }
 }
 
-@media (min-width: 576px) { 
+@media (min-width: 400px ) and (max-width:500px) { 
+    body    {
+        display: block; 
+    }
     .heart{
         font-size:.4em;
     }

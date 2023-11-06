@@ -18,7 +18,7 @@ const mouse={
 canvas.addEventListener("click", function(e){
     mouse.x=e.x;
     mouse.y=e.y; 
-    for (let i = 0; i <10; i++) {
+    for (let i = 0; i <5; i++) {
         particleArray.push(new Particle()); 
     } 
     
