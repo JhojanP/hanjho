@@ -4,6 +4,8 @@
     box-sizing: border-box;
     --width:1.5em;
     --height:1.5em;
+    --widthM:.9em;
+    --heightM:.9em;
 }
 
 body{ 
@@ -107,12 +109,12 @@ body{
     }
 }
 
-@media (min-width: 400px ) and (max-width:500px) { 
+@media (min-width: 400px ) and (max-width:600px) { 
     body    {
         display: block; 
     }
     .content .row1, .content .row2{
-        margin-top:2rem;
+        margin-top:1rem;
     }
     .heart{
         font-size:.9em;
