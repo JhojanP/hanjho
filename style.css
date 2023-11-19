@@ -109,7 +109,7 @@ body{
     }
 }
 
-@media (min-width: 400px ) and (max-width:600px) { 
+@media (min-width: 300px ) and (max-width:600px) { 
     body    {
         display: block; 
     }
