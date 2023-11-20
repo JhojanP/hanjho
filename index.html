@@ -13,11 +13,13 @@
 <body>
     <canvas id="canvas1"></canvas>
     <div class="content" id="content"></div>
+    <audio src="DejateQuerer.mp3"   id="playAudio"></audio>
     <script>
         let msg="I LOVE, YOU, JAZMIN, LET ME, YOU LOVE"; 
         //let msg="ANDABAMOS SIN, BUSCARNOS,PERO SABIENDO, QUE ANDÁBAMOS, PARA, ENCONTRARNOS"; 
 
         let content =document.getElementById("content");
+        let audio=document.getElementById("playAudio");
         let arrRow=msg.split(','); 
         arrRow.forEach((arr, i)=>{  
             let arrMod=arr.split('');
@@ -39,6 +41,14 @@
             div+='</div>' 
             content.insertAdjacentHTML("beforeend",  div);  
         })  
+        console.log(audio)
+        window.addEventListener("focus",function(){
+            audio.play();
+        })
+        window.addEventListener("blur",function(){
+            audio.pause();
+        })
+    
     </script>
     <script src="script.js"></script>
 </body>
