@@ -15,9 +15,14 @@
     <div class="content" id="content"></div>
     <audio src="DejateQuerer.mp3"   id="playAudio"></audio>
     <script>
-        let msg="I LOVE, YOU, JAZMIN, LET ME, YOU LOVE"; 
-        //let msg="ANDABAMOS SIN, BUSCARNOS,PERO SABIENDO, QUE ANDÁBAMOS, PARA, ENCONTRARNOS"; 
 
+        let messages=[
+            'I LOVE, YOU, JAZMIN, LET ME, YOU LOVE',
+            'ANDABAMOS SIN, BUSCARNOS,PERO SABIENDO, QUE ANDÁBAMOS, PARA, ENCONTRARNOS',
+            'I LOVE, YOU', 
+        ] 
+
+        let msg=messages[Random(0,messages.length-1)]; 
         let content =document.getElementById("content");
         let audio=document.getElementById("playAudio");
         let arrRow=msg.split(','); 
@@ -41,13 +46,20 @@
             div+='</div>' 
             content.insertAdjacentHTML("beforeend",  div);  
         })  
-        console.log(audio)
+         
+
         window.addEventListener("focus",function(){
             audio.play();
         })
         window.addEventListener("blur",function(){
             audio.pause();
         })
+
+        function Random(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+        }
     
     </script>
     <script src="script.js"></script>
